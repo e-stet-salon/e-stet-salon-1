@@ -47,12 +47,12 @@ h1, h2, h3, h4, .logo-main {
     align-items: center;
 }
 
-/* === ЛОГОТИП (ОНОВЛЕНО ДЛЯ ДВОХ РЯДКІВ) === */
+/* Логотип */
 .logo {
     text-decoration: none;
     display: flex;
-    flex-direction: column; /* Розташовуємо елементи один під одним */
-    line-height: 1.2;      /* Зменшуємо відстань між рядками */
+    flex-direction: column;
+    line-height: 1.2;
 }
 
 .logo-main {
@@ -62,13 +62,12 @@ h1, h2, h3, h4, .logo-main {
 }
 
 .logo-subtitle {
-    font-size: 0.7rem; /* Маленький розмір */
+    font-size: 0.7rem;
     color: #fff;
     font-weight: 400;
-    letter-spacing: 2px;   /* Розріджені літери */
-    text-transform: uppercase; /* Великі літери */
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
-
 
 .nav ul {
     margin: 0;
@@ -96,7 +95,7 @@ h1, h2, h3, h4, .logo-main {
 
 /* --- Головний екран (Hero Section) --- */
 .hero-section {
-    height: 30vh;
+    height: 40vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -111,7 +110,7 @@ h1, h2, h3, h4, .logo-main {
 }
 
 .hero-title {
-    font-size: 3.0rem;
+    font-size: 3.8rem;
     max-width: 900px;
     margin-bottom: 40px;
     line-height: 1.2;
@@ -317,7 +316,7 @@ h1, h2, h3, h4, .logo-main {
     filter: brightness(1.1);
 }
 
-/* === Підвал (Footer) - ОНОВЛЕНО === */
+/* --- Підвал (Footer) --- */
 .footer {
     padding: 40px 0;
     text-align: center;
@@ -360,12 +359,23 @@ h1, h2, h3, h4, .logo-main {
     letter-spacing: 1px;
 }
 
-/* --- Адаптивність (для мобільних) --- */
+/* --- Адаптивність (для мобільних) - ОНОВЛЕНО --- */
 @media (max-width: 768px) {
-    .header-container { flex-direction: column; gap: 15px; }
-    .nav { display: none; }
+    /* Приховуємо текстову навігацію */
+    .nav { 
+        display: none; 
+    }
+    
+    /* Змінюємо відступи в шапці для мобільних */
+    .header-container {
+        padding: 0 20px;
+    }
+
     .hero-title { font-size: 2.2rem; }
+    
     .about-container { flex-direction: column; }
+    
     .services-grid { grid-template-columns: 1fr; gap: 40px; }
+    
     .booking-columns { flex-direction: column; }
 }
